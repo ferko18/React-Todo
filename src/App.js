@@ -69,10 +69,7 @@ addItem = event => {
           ))}
            
     </div> );
-           
-         
     
-  
   }
 }
 
