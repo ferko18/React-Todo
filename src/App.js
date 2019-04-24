@@ -31,10 +31,38 @@ this.state ={
 
 }
 
+databinder = event => {
+  this.setState({ [event.target.name]: event.target.value });
+};
+
+addItem = event => {
+  event.preventDefault();
+
+  this.setState(e => {
+    return {
+      todo: [
+        ...e.todo,
+        {
+          completed: false,
+          id: Date.now(),
+          task: e.task
+        }
+      ],
+      task: ""
+    };
+  });
+};
+
+
+
   render() {
     return ( <div>
 
-<TodoForm/>
+<TodoForm task={this.state.task}
+          addTodo ={this.addItem}
+          newTask={this.databinder}
+          databinder={this.databinder}
+/>
 
 {this.state.todo.map(e => (
             <TodoList newList={e}  />
