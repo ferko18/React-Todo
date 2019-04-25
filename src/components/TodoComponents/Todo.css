@@ -9,12 +9,17 @@
     justify-content: center;
 }
 
-.TodoList{
+.Todo{
     margin: 0 auto;
     width: 600px;
     border: solid white 1px;
-    background-color: black;
+    background-color: rgb(156, 50, 50);
     color: white;
     text-align: center;
 
+}
+
+.Todo .completed{
+    text-decoration: line-through;
+  color: white;
 }

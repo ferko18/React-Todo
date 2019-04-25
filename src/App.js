@@ -71,7 +71,15 @@ toggleToDo = listid => {
   });
 };
 
-
+removeCompleted=()=>{
+  this.setState(e=>{
+    return{
+      todo: e.todo.filter(element=>{
+        return !element.completed;
+      })
+    }
+  })
+}
 
   render() {
     return ( <div>
