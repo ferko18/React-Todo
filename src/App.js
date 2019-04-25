@@ -53,6 +53,24 @@ addItem = event => {
   });
 };
 
+toggleToDo = listid => {
+  this.setState(e => {
+    return {
+      todo: e.todo.map(element => {
+        if (element.id === listid) {
+          return {
+            task: element.task,
+            id: element.id,
+            completed: !element.completed
+          };
+        } else {
+          return element;
+        }
+      })
+    };
+  });
+};
+
 
 
   render() {
@@ -62,10 +80,11 @@ addItem = event => {
           addTodo ={this.addItem}
           newTask={this.databinder}
           databinder={this.databinder}
+          clearInput={this.removeCompleted}
 />
 
 {this.state.todo.map(e => (
-            <TodoList newList={e}  />
+            <TodoList newList={e} toggleItem={this.toggleToDo} />
           ))}
            
     </div> );

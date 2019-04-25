@@ -9,7 +9,7 @@ const TodoList = function(props) {
   return (
     <div className="TodoList">
       <div>
-        <Todo newList={props.newList} />
+        <Todo newList={props.newList} toggleTodo={props.toggleItem}/>
       </div>
     </div>
   );
