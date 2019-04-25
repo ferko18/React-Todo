@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoForm from './components/TodoComponents/TodoForm'
 import TodoList from './components/TodoComponents/TodoList'
+import Todo from './components/TodoComponents/Todo'
 
 const todo= [
   {
@@ -92,7 +93,8 @@ removeCompleted=()=>{
 />
 
 {this.state.todo.map(e => (
-            <TodoList newList={e} toggleItem={this.toggleToDo} />
+            <TodoList newList={e}
+            toggleItem={this.toggleToDo} />
           ))}
            
     </div> );

@@ -9,7 +9,7 @@
     justify-content: center;
 }
 
-.Todo{
+.Todo-{
     margin: 0 auto;
     width: 600px;
     border: solid white 1px;
@@ -19,7 +19,12 @@
 
 }
 
-.Todo .completed{
+.Todo-completed{
     text-decoration: line-through;
-  color: white;
+   color: white;
+    margin: 0 auto;
+    width: 600px;
+    border: solid black 1px;
+    background-color:black;
+  text-align: center;
 }
